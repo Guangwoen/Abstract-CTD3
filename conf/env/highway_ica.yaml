@@ -1,0 +1,53 @@
+env_name: "intersection-v0"
+
+config:
+  observation:
+    type: "Kinematics"
+    vehicles_count: 4
+    features: ["presence", "x", "y","vx", 'vy', "cos_h", "sin_h"]
+
+    features_range:
+        "x": [-100, 100]
+        "y": [-100, 100]
+        "vx": [-40, 40]
+        "vy": [-40, 40]
+
+    absolute: False
+    order: "sorted"
+    normalize: False
+    clip: False
+    observe_intentions: False
+
+  action:
+    type: "DiscreteMetaAction"
+    longitudinal: True
+    lateral: True
+
+  lanes_count: 2
+
+  controlled_vehicles: 1
+  initial_lane_id": None
+  duration: 20
+  destination: "o1"
+
+  ego_spacing: 2
+  vehicles_density: 1
+
+  spawn_probability: 0.6
+
+  collision_reward: 0
+  right_lane_reward: 0
+  high_speed_reward: 0
+
+
+  reward_speed_range: [15, 25]
+
+  normalize_reward: False
+  offroad_terminal: True
+
+  simulation_frequency: 15
+  policy_frequency: 5
+
+  screen_width: 640
+  screen_height: 300
+

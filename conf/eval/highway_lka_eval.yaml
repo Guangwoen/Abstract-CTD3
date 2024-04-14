@@ -1,0 +1,28 @@
+dim:
+  total_dim: 11
+  state_dim: 3
+  action_dim: 1
+  reward_dim: 1
+  cost_dim: 1
+granularity:
+  state_gran: [0.01, 0.004, 0.002]
+  action_gran: [0.01]
+  reward_gran: [0.04]
+  cost_gran: [100]
+upperbound:
+  state_upperbound: [1.5, 0.53, 1]
+  action_upperbound: [0.9]
+  reward_upperbound: [1]
+  cost_upperbound: [100]
+lowerbound:
+  state_lowerbound: [-1.2, -0.43, 0.53]
+  action_lowerbound: [-0.93]
+  reward_lowerbound: [-3]
+  cost_lowerbound: [0]
+prec: [3, 3, 4]
+
+cr: 0.25
+cd: 0.25
+cp: 0.25
+cs: 0.25
+tolerance: 0.001

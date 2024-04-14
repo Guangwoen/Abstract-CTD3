@@ -1,0 +1,7 @@
+/plot_history
+*/tensorboard/
+*/plots/
+*.log
+*.png
+/project
+*.csv
